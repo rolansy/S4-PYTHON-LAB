@@ -1,6 +1,6 @@
 d={}
 while True:
-    print("1. Update Stock\n2. Add Stock\n3. Delete Stock\n4. Search Stock\n5. Exit")
+    print("1. Update Stock\n2. Add Stock\n3. Delete Stock\n4. Search Stock\n5. Display Stocks\n6. Exit")
     ch=int(input("Enter your choice: "))
     if ch==1:
         print("Update Stock")
@@ -23,7 +23,7 @@ while True:
         print("Delete Stock")
         bn=input("Enter Book Name to be deleted : ")
         if bn in list(d.keys()):
-            d[bn]
+            del d[bn]
             print(bn,"Deleted") 
         else:
             print(bn,"Doesnt Exist ")
@@ -35,4 +35,9 @@ while True:
         else:
             print(bn,"Doesnt Exist ")
     elif ch==5:
+    		print("BookName  Stock")
+    		for i in list(d.keys()):
+    			print(i,d[i])
+    
+    elif ch==6:
         break
