@@ -1,8 +1,8 @@
 d = {}
 
 while True:
-    print("1. Update Stock")
-    print("2. Add Stock")
+    print("1. Add Stock")
+    print("2. Update Stock")
     print("3. Delete Stock")
     print("4. Search Stock")
     print("5. Display Stocks")
@@ -11,17 +11,16 @@ while True:
     ch = int(input("Enter your choice: "))
 
     if ch == 1:
-        print("\nUpdate Stock")
+        print("\nAdd Stock")
         bn = input("Enter Book Name: ")
 
         if bn in list(d.keys()):
             print(bn, "Exists")
         else:
-            print(bn, "Doesn't Exist yet")
             d[bn] = int(input("Enter Stock Quantity: "))
 
     elif ch == 2:
-        print("\nAdd Stock")
+        print("\nUpdate Stock")
         bn = input("Enter Book Name: ")
 
         if bn in list(d.keys()):
