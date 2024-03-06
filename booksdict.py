@@ -53,10 +53,10 @@ while True:
 
     elif ch == 5:
         print("\nDisplay Stocks")
-        print("Book Name\tStock")
-        
+        print(f"{'Book Name':<10}{'Stock':7}")
         for i in list(d.keys()):
-            print(i, "\t", d[i])
+            print(f"{i:<8}{d[i]:^7}")
 
     elif ch == 6:
         break
+        
