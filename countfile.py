@@ -5,8 +5,9 @@ lc=len(l)
 wc=0
 for i in l:
     a=i.split()
-    wc+=len(a)
     for x in a:
+        if not x.isnumeric():
+                wc+=1
         for j in x:
             if j.isupper():
                 d['U']+=1
@@ -19,3 +20,4 @@ print("Word Count:",wc)
 print("Upper Case Count:",d['U'])
 print("Lower Case Count:",d['L'])
 print("Special Character Count:",d['SP'])
+f.close()
