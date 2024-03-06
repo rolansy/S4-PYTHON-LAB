@@ -10,7 +10,6 @@ n=[]
 print()
 for i in l:
 	for x in list(str(i)):
-		print(x)
 		if int(x) not in n:
 			n.append(int(x))
 print("New Array : ")
