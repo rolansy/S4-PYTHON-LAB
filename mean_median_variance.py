@@ -6,4 +6,8 @@ df=pd.DataFrame(d)
 print(df)
 print('Mean Population : ',df['Population'].mean())
 print('Mean Murder (per 100k per year) : ',df['Murder Rate'].mean())
+print('Median Population : ',df['Population'].median())
+print('Median Murder (per 100k per year) : ',df['Murder Rate'].median())
+print('Variance Population : ',df['Population'].var())
+print('Variance Murder (per 100k per year) : ',df['Murder Rate'].var())
 
