@@ -44,7 +44,6 @@ ch=0
 while (ch!=10):
     plt.xlabel('x-axis')
     plt.ylabel('y-axis')
-    plt.legend()
     plt.grid(True)
     print("Choose Function to Plot : ")
     print("\n1.y=x\n2.y=x^2\n3.y=2^x\n4.y=sin\n5.y=cosx\n6.y=e^x\n10.Exit\n")
