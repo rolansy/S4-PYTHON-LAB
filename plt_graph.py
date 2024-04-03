@@ -1,7 +1,9 @@
 import matplotlib.pyplot as plt
+import math as m
 
 def f1():
-    y=x=range(-10,11)
+    x = range(-10, 11)
+    y = [i for i in x] 
     plt.plot(x,y)
     plt.show()
     
@@ -18,10 +20,29 @@ def f3():
     plt.show()
 
 
+def f4():
+    x=range(-10,11)
+    y=[m.sin(i) for i in x]
+    plt.plot(x,y)
+    plt.show()
+    
+def f5():
+    x=range(-10,11)
+    y=[m.cos(i) for i in x]
+    plt.plot(x,y)
+    plt.show()
+    
+def f6():
+    x=range(-10,11)
+    y=[m.exp(i) for i in x]
+    plt.plot(x,y)
+    plt.show()
 
 
 ch=0
 while (ch!=10):
+    plt.xlabel('x-axis')
+    plt.ylabel('y-axis')
     print("Choose Function to Plot : ")
     print("\n1.y=x\n2.y=x^2\n3.y=2^x\n4.y=sin\n5.y=cosx\n6.y=e^x\n10.Exit\n")
     ch=int(input("Enter Choice : "))
