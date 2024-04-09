@@ -1,23 +1,34 @@
 import pandas as pd
 from scipy.stats import chi2_contingency as c2
 
-tb={
-    'edu':['High School','Bachelors','Masters','Ph.d.','Total'],
-    'Female':[60,54,46,41,201],
-    'Male':[40,44,53,57,194],
-    'Total':[100,98,99,98,395]
+data={
+    'High School':[60,40,100],
+    'Bachelors':[54,44,98],
+    'Masters':[46,53,99],
+    'Ph.d.':[41,57,98],
+    'Total':[201,194,395]
     
 }
 
-df=pd.DataFrame(tb)
+index=['Female','Male','Total']
+df=pd.DataFrame(data,index)
 print(df)
-contingency_table=pd.crosstab(df['Total'],df['edu'])
-print(contingency_table)
+ct=[df.loc['Female'],df.loc['Male']]
 
-chi2,p,dof,excepted=c2(contingency_table.values)
-print("Chi-square Statistics : ",chi2)
+#print(df.loc['Female'])
+#print(list(df.loc['Female']))
+
+chi2,p,dof,expected=c2(ct)
+print("Chi-square : ",chi2)
+print("Table Value : ",7.815)
 print("Degree of Freedom : ",dof)
 print("P-Value : ",p)
+print("Expected : ")
+
+df2=pd.DataFrame(expected,columns=['High School','Bachelors','Masters','Ph.d.','Total'],index=['Female','Male'])
+print(df2)
+
+
 
 if p < 0.05:
     print("Gender and Education Level are dependent.")
