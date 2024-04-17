@@ -17,7 +17,7 @@ t_crit=t.ppf(1-p,df)
 print("Table Value: {:.3f}".format(t_crit))
 
 if tobs > t_crit:
-    print("Reject Null Hypothesis.")
+    print("Reject Null Hypothesis. Hence the Mileage has improved.")
 else:
-    print("Accept Null Hypothesis.")
+    print("Accept Null Hypothesis. Hence the Mileage has not improved.")
 
