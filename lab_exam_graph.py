@@ -21,4 +21,7 @@ for i in range(6):
     mx=[j+((i+1)*m.pi)/3 for j in x]
     plt.plot(mx,y,color=colors[i])
 plt.xlim(0,10)
+plt.title('6 sin x')
+plt.ylabel("y-axis")
+plt.xlabel("x-axis")
 plt.show()
